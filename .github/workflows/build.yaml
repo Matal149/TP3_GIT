@@ -38,6 +38,11 @@ jobs:
             - name: Install NPM dependencies
               run:  | 
                     npm install --production --unsafe-perm
+                    
+            - uses: sburris/dependency-check-action@master
+              with:
+                Project-Name: TP3_GIT
+
             - name: Archive dependency check reports
               uses: actions/upload-artifact@v1
               with:
